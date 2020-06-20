@@ -1,6 +1,6 @@
 {
   "name": "captcha-image",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A simple captcha image generator.",
   "main": "index.js",
   "repository": "tpkahlon/captcha-image",
