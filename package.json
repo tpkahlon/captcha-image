@@ -1,0 +1,17 @@
+{
+  "name": "captcha-image",
+  "version": "1.0.0",
+  "description": "A simple captcha image generator.",
+  "main": "index.js",
+  "repository": "tpkahlon/captcha-image",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "captcha",
+    "image"
+  ],
+  "author": "Tej Kahlon",
+  "license": "ISC"
+}
