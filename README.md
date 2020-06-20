@@ -4,8 +4,8 @@ A simple captcha image generator.
 
 ## Install
 
-- `npm run captcha-image`
-- `yarn captcha-image`
+- `npm install captcha-image`
+- `yarn add captcha-image`
 
 ## Example
 
