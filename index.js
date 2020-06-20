@@ -30,7 +30,7 @@ class Captcha {
       const getWord = () => {
         let newWord = ``;
         let count = 0;
-        while (count < length) {
+        while (count < this.length) {
           newWord += getCharacter();
           count++;
         }
