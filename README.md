@@ -24,6 +24,7 @@ You can pass following parameters to Captcha instance in order to generate custo
 | height / Number                                                                                             | 150          |
 | bgColor / String                                                                                            | #eee         |
 | color / String                                                                                              | #222         |
+| length / Number / Length of text                                                                            | 7            |
 
 ## Events
 
@@ -51,7 +52,8 @@ const captchaImage = new Captcha(
   300,
   150,
   '#eee',
-  '#111'
+  '#111',
+  6
 ).createImage();
 
 function createMarkup(source) {
