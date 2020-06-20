@@ -7,6 +7,10 @@ A simple captcha image generator.
 - `npm run captcha-image`
 - `yarn captcha-image`
 
+## Example
+
+Play with sandbox example here: [Demo](https://codesandbox.io/s/focused-butterfly-qv2go?file=/src/App.js)
+
 ## Options
 
 You can pass following parameters to Captcha instance in order to generate custom Captcha image
