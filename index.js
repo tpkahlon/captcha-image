@@ -1,5 +1,6 @@
 class Captcha {
   constructor(font, align, baseline, width, height, bgColor, color) {
+    let code;
     this.font = font;
     this.align = align;
     this.baseline = baseline;
@@ -7,6 +8,9 @@ class Captcha {
     this.height = height;
     this.color = color;
     this.bgColor = bgColor;
+    this.getCode = () => {
+      return code;
+    };
     this.createImage = () => {
       const captcha = document.createElement('canvas');
       const newImage = document.createElement('image');
@@ -38,6 +42,7 @@ class Captcha {
       };
 
       const newWord = getWord();
+      code = getWord();
       const context = captcha.getContext('2d');
       context.canvas.width = this.width;
       context.canvas.height = this.height;

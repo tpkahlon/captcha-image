@@ -11,7 +11,7 @@ Use `npm run captcha-image` or `yarn captcha-image` to install the package
 ### React
 
 ```js
-import Captcha from './Captcha';
+import Captcha from './captcha-image';
 
 const captchaImage = new Captcha(
   '35px Arial',
@@ -32,6 +32,7 @@ function MyCaptcha() {
 }
 
 function App() {
+  console.log(captchaImage.getCode());
   return (
     <div className='App'>
       <MyCaptcha />
@@ -46,14 +47,15 @@ export default App;
 
 You can pass following parameters to Captcha instance in order to generate custom Captcha image
 
-- [font](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font): '35px Arial'
-- [align](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign): 'center'
-- [baseline](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline): 'middle
-- width: 300
-- height: 150
-- bgColor: #eee
-- color: #222
+- [font] / String: (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font): '35px Arial'
+- [align] / String: (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign): 'center'
+- [baseline] / String: (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline): 'middle
+- width / Number: 300
+- height / Number: 150
+- bgColor / String: #eee
+- color / String: #222
 
 ## Events
 
 - createImage() method return HTML element parsed as String
+- getCode() method return generate code as String
