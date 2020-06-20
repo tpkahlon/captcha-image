@@ -4,14 +4,41 @@ A simple captcha image generator.
 
 ## Install
 
-Use `npm run captcha-image` or `yarn captcha-image` to install the package
+- `npm run captcha-image`
+- `yarn captcha-image`
 
-## Usage
+## Options
+
+You can pass following parameters to Captcha instance in order to generate custom Captcha image
+
+| Attributes                                                                                                  | Values       |
+| ----------------------------------------------------------------------------------------------------------- | ------------ |
+| [font](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font) / String             | '35px Arial' |
+| [align](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign) / String       | 'center'     |
+| [baseline](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline) / String | 'middle      |
+| width / Number                                                                                              | 300          |
+| height / Number                                                                                             | 150          |
+| bgColor / String                                                                                            | #eee         |
+| color / String                                                                                              | #222         |
+
+## Events
+
+- createImage() method return HTML element parsed as String
+
+## Output
+
+Final outcome looks like this:
+
+```html
+<img src="..." data-key="..." />
+```
+
+## Demo Usage
 
 ### React
 
 ```js
-import Captcha from './captcha-image';
+import Captcha from 'captcha-image';
 
 const captchaImage = new Captcha(
   '35px Arial',
@@ -40,28 +67,4 @@ function App() {
 }
 
 export default App;
-```
-
-## Options
-
-You can pass following parameters to Captcha instance in order to generate custom Captcha image
-
-- [font] / String: (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/font): '35px Arial'
-- [align] / String: (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign): 'center'
-- [baseline] / String: (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline): 'middle
-- width / Number: 300
-- height / Number: 150
-- bgColor / String: #eee
-- color / String: #222
-
-## Events
-
-- createImage() method return HTML element parsed as String
-
-## Output
-
-Final outcome looks like this:
-
-```html
-<img src="..." data-key="..." />
 ```
