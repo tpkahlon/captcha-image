@@ -1,6 +1,5 @@
 class Captcha {
   constructor(font, align, baseline, width, height, bgColor, color) {
-    let code;
     this.font = font;
     this.align = align;
     this.baseline = baseline;
@@ -8,13 +7,9 @@ class Captcha {
     this.height = height;
     this.color = color;
     this.bgColor = bgColor;
-    this.getCode = () => {
-      return code;
-    };
     this.createImage = () => {
       const captcha = document.createElement('canvas');
       const newImage = document.createElement('image');
-      newImage.id = 'canvas';
 
       const getRandomInt = (min, max) => {
         min = Math.ceil(min);
@@ -42,7 +37,6 @@ class Captcha {
       };
 
       const newWord = getWord();
-      code = getWord();
       const context = captcha.getContext('2d');
       context.canvas.width = this.width;
       context.canvas.height = this.height;
@@ -54,6 +48,7 @@ class Captcha {
       context.fillStyle = this.color;
       context.fillText(newWord, this.width / 2, this.height / 2);
       newImage.setAttribute('src', context.canvas.toDataURL());
+      newImage.setAttribute('data-key', newWord);
       return newImage.outerHTML;
     };
   }

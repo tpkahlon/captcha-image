@@ -32,7 +32,6 @@ function MyCaptcha() {
 }
 
 function App() {
-  console.log(captchaImage.getCode());
   return (
     <div className='App'>
       <MyCaptcha />
@@ -58,4 +57,11 @@ You can pass following parameters to Captcha instance in order to generate custo
 ## Events
 
 - createImage() method return HTML element parsed as String
-- getCode() method return generate code as String
+
+## Output
+
+Final outcome looks like this:
+
+```html
+<img src="..." data-key="..." />
+```
